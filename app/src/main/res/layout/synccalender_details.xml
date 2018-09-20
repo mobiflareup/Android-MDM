@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/b_getCalenderEvents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/calendarEvents"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/b_downloadCalenderEvents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b_getCalenderEvents"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/downloadcalendarEvents"
+        android:textColor="@color/White" />
+
+    <Spinner
+        android:id="@+id/spinnerCalendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/b_downloadCalenderEvents"/>
+
+    <Button
+        android:id="@+id/btn_submitcalendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCalendar"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/synccalendar"
+        android:textColor="@color/White" />
+
+</RelativeLayout>

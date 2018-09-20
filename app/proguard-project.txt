@@ -1,0 +1,68 @@
+#remove the redundant processing files
+-dontpreverify
+#Specify to repackage all the class files are renamed
+-repackageclasses ''
+#Specify the access of the class and the class members can be extended while compiling
+-allowaccessmodification
+#Specifies the optimization
+-optimizations !code/simplification/arithmetic
+-keepattributes *Annotation*
+
+#Keep class
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.content.ContentProvider
+
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
+}
+
+#The security class
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.content.Context {
+   public void *(android.view.View);
+   public void *(android.view.MenuItem);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    static ** CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+
+-keep class com.android.internal.telephony.ITelephony { *; }
+
+-keep class info.guardianproject.iocipher.** { *; }
+-keep class info.guardianproject.libcore.io.** { *; }
+
+#-dontwarn
+
+-dontwarn okio.**
+-dontwarn retrofit2.**
+
+-keep class net.sqlcipher.** {
+    *;
+}
+
+-keep class net.sqlcipher.database.** {
+    *;
+}

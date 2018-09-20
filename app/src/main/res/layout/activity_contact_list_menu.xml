@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+       <Button
+        android:id="@+id/btn_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/upload"
+        android:textColor="@color/White" />
+       
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_contacts"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/download"
+        android:textColor="@color/White" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_add"
+        android:textColor="@color/Black" />
+    
+      <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner1"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:text="@string/Submit"
+        android:textColor="@color/White" />
+    
+
+</RelativeLayout>

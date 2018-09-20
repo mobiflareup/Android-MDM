@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_action_cached"
+        android:title="Refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/remark"
+        android:icon="@mipmap/ic_action_useredit"
+        android:title="Remarks"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/add_customer"
+        android:icon="@mipmap/ic_action_social_person_add"
+        android:title="Add Customer"
+        app:showAsAction="ifRoom" />
+
+</menu>

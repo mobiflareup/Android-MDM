@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/customarname_spinner"
+                    android:layout_below="@+id/nameTxt"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/remarks"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/remark_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/customarname_spinner"
+                    android:layout_alignLeft="@+id/txt2"
+                    android:layout_alignRight="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/txt2"
+                    android:layout_below="@+id/txt2"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_transparent"
+                    android:padding="10dp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/amounttxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/customarname_spinner"
+                    android:layout_below="@+id/remark_txt"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/amount"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/amount_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/customarname_spinner"
+                    android:layout_alignLeft="@+id/txt2"
+                    android:layout_alignRight="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/txt2"
+                    android:layout_below="@+id/amounttxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_transparent"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:padding="10dp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/customarname_spinner"
+                    android:layout_below="@+id/amount_txt"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/upload"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/uploadfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/customarname_spinner"
+                    android:layout_alignLeft="@+id/txt2"
+                    android:layout_alignRight="@+id/customarname_spinner"
+                    android:layout_alignStart="@+id/txt2"
+                    android:layout_below="@+id/txt3"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_transparent"
+                    android:drawableRight="@mipmap/ic_action_upload"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:padding="10dp"
+                    android:text="@string/choose"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/addbtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/uploadfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/add"
+                    android:textColor="@color/background"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ll2"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="No"
+                    android:textColor="@color/background" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:textColor="@color/background" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Remarks"
+                    android:textColor="@color/background" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:textColor="@color/background" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Amount"
+                    android:textColor="@color/background" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:textColor="@color/background" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Proof"
+                    android:textColor="@color/background" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ll2"
+                android:background="#ffffff" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/allowancelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/viewline">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
